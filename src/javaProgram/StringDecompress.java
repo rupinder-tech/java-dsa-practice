@@ -7,7 +7,7 @@ public class StringDecompress {
             char c = str.charAt(i);
             int count = Character.getNumericValue(str.charAt(i+1));
             for(int j=0; j<count; j++){
-                decompressed.append(c).append(count);
+                decompressed.append(c);
             }
         }
         System.out.println(decompressed);

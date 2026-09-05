@@ -10,7 +10,10 @@ public class MaxProfitWithFess {
             int oldHold = hold;
             int oldCash = cash;
 
+            //Buy or continue holding
             hold = Math.max(oldHold, oldCash - prices[i]);
+
+            //Sell or continue without stocks
             cash = Math.max(oldCash, oldHold + prices[i] - fee);
         }
         System.out.println("Profit:" + cash);
